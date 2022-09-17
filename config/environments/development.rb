@@ -14,6 +14,18 @@ Rails.application.configure do
   # デフォルトURLの指定
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # メールアドレス認証
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :user_name => 'Gメールアドレス',
+    :password => 'Gメールパスワード',
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
