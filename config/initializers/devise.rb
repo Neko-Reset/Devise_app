@@ -19,6 +19,9 @@ Devise.setup do |config|
   # メールアドレス認証
   config.mailer_sender = "メールアドレス"
   
+  # ツイッター連携
+  config.omniauth :twitter, 'oPul6jL7kvUBrUvPz8ND3uI6v', 'vN0mOZcvu0QVaXQ0FXUSD1vi3MPvZyf46nhteCmvk1pdXMwIPA', callback_url: 'http://127.0.0.1:3000/users/auth/twitter/callback'
+  
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'

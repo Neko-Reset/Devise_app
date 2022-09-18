@@ -25,5 +25,6 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
+<%= link_to 'ログイン', user_twitter_omniauth_authorize_path, method: :post %>
+<%= link_to "Sign in with Twitter", user_twitter_omniauth_authorize_path %>
 <%= render "devise/shared/links" %>
